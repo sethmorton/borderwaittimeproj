@@ -1,2 +1,0 @@
-# borderwaittime
-# borderwaittimee
