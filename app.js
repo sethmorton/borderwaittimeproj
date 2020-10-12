@@ -30,7 +30,7 @@ async function getData() {
     }
   });
   client.connect((err) => {
-    const collection = client.db("eg").collection("egcol");
+    const collection = client.db("borderdata").collection("borderdata");
     const mapdata = this.mapdata;
     const cbpdata = this.cbpdata;
     const time = Date.now();

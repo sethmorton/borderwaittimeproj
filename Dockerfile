@@ -1,5 +1,5 @@
 
 FROM node:14
 COPY . .
-ENTRYPOINT "run.sh && run.sh run"
+CMD [ "node", "index.js" ]
 
