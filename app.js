@@ -7,7 +7,7 @@ const distance = require("google-distance-matrix");
 // VARS
 const cbpUrl = "https://bwt.cbp.gov/xml/bwt.xml";
 const uri =
-  "mongodb+srv://seth:8FzjIfvkmIZicmzB@bajawaittime.j8pkw.mongodb.net/eg?retryWrites=true&w=majority";
+  "mongodb+srv://seth:8FzjIfvkmIZicmzB@cluster0.j8pkw.mongodb.net/bajaborder?retryWrites=true&w=majority";
 const API_KEY = "AIzaSyCXD1CInLtPgHXXkcUeps3XLaxkO7qNjxI";
 
 // SETUP
@@ -30,7 +30,7 @@ async function getData() {
     }
   });
   client.connect((err) => {
-    const collection = client.db("borderdata").collection("borderdata");
+    const collection = client.db("bajaborder").collection("bordertimes");
     const mapdata = this.mapdata;
     const cbpdata = this.cbpdata;
     const time = Date.now();
