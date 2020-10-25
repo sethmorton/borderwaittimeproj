@@ -1,7 +1,0 @@
-version: "3.8"
-services:
-  app:
-    build: .
-  # environment:
-#   DATABASE_URL: mongodb+srv://seth:8FzjIfvkmIZicmzB@bajawaittime.j8pkw.mongodb.net/eg?retryWrites=true&w=majority
-#   MAPS_API: AIzaSyCXD1CInLtPgHXXkcUeps3XLaxkO7qNjxI

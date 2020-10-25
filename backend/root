@@ -1,7 +1,0 @@
-0 * * * * node /bin/app.js
-# this will be for every hour
-# * min (0-59)
-# * hour (0-23)
-# * day (1-31)
-# * month (1-12) 
-# * weekday(0-6)

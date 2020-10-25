@@ -1,7 +1,6 @@
+FROM node:current-slim
 
-FROM node:14
-WORKDIR /app
-COPY app.js .
-EXPOSE 8080
-CMD [ "node", "app.js" ]
-
+COPY app.js /bin/app.js
+COPY root /var/spool/cron/crontabs/root
+RUN chmod +x /bin/app.js
+CMD crond -l 2 -f
