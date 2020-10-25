@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: borderwait
+    container_name: borderwait-cron
+    restart: always
+    ports:
+      - "8090:8081"
