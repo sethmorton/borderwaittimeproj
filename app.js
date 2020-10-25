@@ -14,8 +14,8 @@ const API_KEY = "AIzaSyCXD1CInLtPgHXXkcUeps3XLaxkO7qNjxI";
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 const client = new mongoClient(uri, { useNewUrlParser: true });
 distance.key(API_KEY);
-const origin = ["San Diego CA"];
-const destination = ["Tijuana"];
+const origin = new google.maps.LatLng(32.525169, -117.017955);
+const destination = new google.maps.LatLng(32.558894, -117.060704);
 
 // FUNCTION
 async function getData() {
@@ -31,10 +31,10 @@ async function getData() {
   });
   client.connect((err) => {
     const collection = client.db("bajaborder").collection("bordertimes");
-    const mapdata = this.mapdata;
+    const googlemapdata = this.mapdata;
     const cbpdata = this.cbpdata;
     const time = Date.now();
-    collection.insertOne({ mapdata, cbpdata, time });
+    collection.insertOne({ googlemapdata, cbpdata, time });
     client.close();
   });
 }
