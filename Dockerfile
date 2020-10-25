@@ -1,4 +1,4 @@
-FROM node:current-slim
+FROM node:lts-alpine
 
 COPY app.js /bin/app.js
 COPY root /var/spool/cron/crontabs/root
