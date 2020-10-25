@@ -1,5 +1,7 @@
 
 FROM node:14
-COPY . .
-CMD [ "node", "index.js" ]
+WORKDIR /app
+COPY app.js .
+EXPOSE 8080
+CMD [ "node", "app.js" ]
 
