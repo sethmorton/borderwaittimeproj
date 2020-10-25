@@ -14,8 +14,8 @@ const API_KEY = "AIzaSyCXD1CInLtPgHXXkcUeps3XLaxkO7qNjxI";
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 const client = new mongoClient(uri, { useNewUrlParser: true });
 distance.key(API_KEY);
-const origin = new google.maps.LatLng(32.525169, -117.017955);
-const destination = new google.maps.LatLng(32.558894, -117.060704);
+const origin = ["32.525169,-117.017955"];
+const destination = ["32.558894,-117.060704"];
 
 // FUNCTION
 async function getData() {
